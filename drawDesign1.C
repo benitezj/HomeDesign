@@ -8,7 +8,7 @@ void drawQuark(int x, int y);
 
 void drawDesign1(){
 
-  drawSofa(5,L-220);
+  drawSofa(5,L-218);
   drawDiningTable(50,100);
   drawSmallTable(47,100+180+78);
   drawPlant(40,100+180+47);
@@ -19,13 +19,15 @@ void drawDesign1(){
 
 void drawSofa(int x, int y){
 
-  //Sofa: 100x180
-  TBox sofa(x,y,x+100,y+180);
+  //Sofa: 100x184
+  int w=100;
+  int l=184;
+  TBox sofa(x,y,x+w,y+l);
   sofa.SetFillStyle(1001);
   sofa.SetFillColor(34);
   sofa.DrawClone();
 
-  TBox sofaTop(x,y,x+40,y+180);
+  TBox sofaTop(x,y,x+40,y+l);
   sofaTop.SetFillStyle(3353);
   sofaTop.SetFillColor(kGray);
   sofaTop.DrawClone();
