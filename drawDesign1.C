@@ -1,5 +1,10 @@
 
-void drawSofa(int x, int y);
+void drawSofa(int x, int y);//current
+void drawSofa2(int x, int y);//sectional
+void drawSofa3(int x, int y);//seccional
+void drawSofa4(int x, int y);//2pz with a single
+void drawSofa5(int x, int y);//seccional
+
 void drawDiningTable(int x, int y);
 void drawSmallTable(int x, int y);
 void drawPlant(int x, int y);
@@ -8,7 +13,12 @@ void drawQuark(int x, int y);
 
 void drawDesign1(){
 
-  drawSofa(5,L-218);
+  //drawSofa(5,L-218);
+  //drawSofa2(5,L-275);
+  //drawSofa3(5,L-270);
+  //drawSofa4(5,L-(212+77)-5);
+  drawSofa5(5,L-250);
+ 
   drawDiningTable(50,100);
   drawSmallTable(47,100+180+78);
   drawPlant(40,100+180+47);
@@ -33,6 +43,93 @@ void drawSofa(int x, int y){
   sofaTop.DrawClone();
   
 }
+
+void drawSofa2(int x, int y){
+
+  //Seccional blanco: 270 x 260 y 1.1 ancho
+  int w=260;
+  int l=270;
+  int d=110;
+  TBox b1(x,y,x+d,y+(l-d));
+  b1.SetFillStyle(1001);
+  b1.SetFillColor(18);
+  b1.DrawClone();
+
+  TEllipse ell(x+d,y+(l-d),d,d,90,180);
+  ell.SetFillStyle(1001);
+  ell.SetFillColor(18);
+  ell.DrawClone();
+
+  TBox b2(x+d,y+(l-d),x+w,y+l);
+  b2.SetFillStyle(1001);
+  b2.SetFillColor(18);
+  b2.DrawClone();
+  
+}
+
+
+
+void drawSofa3(int x, int y){
+  //Seccional //2.67 x 1.93 x 0.89
+  int w=193;
+  int l=267;
+  int d=89;
+  TBox b1(x,y,x+d,y+l);
+  b1.SetFillStyle(1001);
+  b1.SetFillColor(18);
+  b1.DrawClone();
+  TBox b2(x+d,y+(l-d),x+w,y+l);
+  b2.SetFillStyle(1001);
+  b2.SetFillColor(18);
+  b2.DrawClone();
+  
+}
+
+
+void drawSofa4(int x, int y){
+  //2pz: 138x212 and 87x77 
+  int w=138;
+  int l=212;
+  int d=77;
+  int offsetY=30;
+  TBox b1(x,offsetY+y,x+w,offsetY+y+d);
+  b1.SetFillStyle(1001);
+  b1.SetFillColor(18);
+  b1.DrawClone();
+  TBox b2(x,offsetY+y,x+d,offsetY+y+l);
+  b2.SetFillStyle(1001);
+  b2.SetFillColor(18);
+  b2.DrawClone();
+
+  int offsetX=20;
+  TBox b3(offsetX+x+d,y+l,offsetX+x+d+87,y+l+d);
+  b3.SetFillStyle(1001);
+  b3.SetFillColor(18);
+  b3.DrawClone();
+  
+}
+
+
+void drawSofa5(int x, int y){
+  //Seccional 160 x 248 x 80
+  int w=160;
+  int l=248;
+  int d=90;
+  TBox b1(x,y,x+d,y+l);
+  b1.SetFillStyle(1001);
+  b1.SetFillColor(kGray);
+  b1.DrawClone();
+  TBox b2(x,y+(l-d),x+w,y+l);
+  b2.SetFillStyle(1001);
+  b2.SetFillColor(kGray);
+  b2.DrawClone();
+  
+}
+
+
+
+
+
 
 void drawDiningTable(int x, int y){
   int tabW=106;
