@@ -1,9 +1,11 @@
 
-void drawSofa(int x, int y);//current
+void drawSofa(int x, int y, int w, int l);//current
 void drawSofa2(int x, int y);//sectional
-void drawSofa3(int x, int y);//seccional
+void drawSofa3(int x, int y, int w, int l, int d);//seccional
 void drawSofa4(int x, int y);//2pz with a single
 void drawSofa5(int x, int y);//seccional
+void drawSofa6(int x, int y);//seccional https://www.coppel.com/hogar/salas/salas-hogar/sala-esquinera-seddi-contemporanea-2-piezas-pm-4707673
+
 
 void drawDiningTable(int x, int y);
 void drawSmallTable(int x, int y);
@@ -13,25 +15,33 @@ void drawQuark(int x, int y);
 
 void drawDesign1(){
 
-  //drawSofa(5,L-218);
+  //drawSofa(5,L-218, 100, 184);
   //drawSofa2(5,L-275);
-  //drawSofa3(5,L-270);
+  //drawSofa3(5,L-270,193,267,89);
+  //drawSofa3(5,L-200,180,200,90);
   //drawSofa4(5,L-(212+77)-5);
-  drawSofa5(5,L-250);
+  //drawSofa5(5,L-250);
+
+  //drawSofa(5,L-162-92-10, 92, 162);  drawSofa(50,L-92, 162, 92);//two medium sofas
+  //drawSofa(5,L-193-83+20, 83, 193);  drawSofa(100,L-87, 92, 87);//two medium sofas
+  
+  //drawSofa(5,L-196-87, 87, 196);  drawSofa(5+87,L-87, 110, 87);//Home Decor bought: 87x196, 87x110  , by 75 tall
+  drawSofa(5,L-240-58, 87, 240);  drawSofa(5+87,L-87, 110, 87);//Home Decor bought: 87x240, 87x110
+
  
   drawDiningTable(50,100);
-  drawSmallTable(47,100+180+78);
-  drawPlant(40,100+180+47);
+  //drawSmallTable(47,100+180+78);
+  //drawPlant(40,100+180+47);
   drawPrinter(5,5);
   drawQuark(100,15);
 }
 
 
-void drawSofa(int x, int y){
+void drawSofa(int x, int y, int w, int l){
 
   //Sofa: 100x184
-  int w=100;
-  int l=184;
+  //int w=100;
+  //int l=184;
   TBox sofa(x,y,x+w,y+l);
   sofa.SetFillStyle(1001);
   sofa.SetFillColor(34);
@@ -69,11 +79,11 @@ void drawSofa2(int x, int y){
 
 
 
-void drawSofa3(int x, int y){
+void drawSofa3(int x, int y,int w,int l,int d){
   //Seccional //2.67 x 1.93 x 0.89
-  int w=193;
-  int l=267;
-  int d=89;
+  //int w=193;
+  //int l=267;
+  //int d=89;
   TBox b1(x,y,x+d,y+l);
   b1.SetFillStyle(1001);
   b1.SetFillColor(18);
